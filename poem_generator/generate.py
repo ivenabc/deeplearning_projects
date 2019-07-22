@@ -2,7 +2,7 @@ import  tensorflow as tf
 from data import Poem
 from model import GenModel
 
-data = Poem('../dataset/poetrySong/poetrySongTest.txt')
+data = Poem('../dataset/poetrySong/poetrySong.txt')
 BATCH_SIZE = 64
 BUFFER_SIZE = 10000
 checkpoint_dir = './data'
@@ -49,4 +49,4 @@ def generate_text(model, start_string):
 
   return (start_string + ''.join(text_generated))
 
-print(generate_text(model, start_string=u"山"))
+print(generate_text(model, start_string=u"牡"))
